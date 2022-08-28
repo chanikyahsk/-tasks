@@ -1,14 +1,12 @@
 <html>
     <head>
-        <title>OrganicFoods</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <title>Homepage</title>
     </head>
     <style>
-        *{
-            margin:0;
-            padding:0;
-        }
-        :root{
+        body{
+    margin:0px;
+}
+:root{
             --primary-color:#edf2fc;
             --secondary-color:#212121;
         }
@@ -20,130 +18,407 @@
             width:30px;
             cursor:pointer;
         }
-        nav ul{
-            flex:1;
-            text-align:right;
-        }
-        .food{
-            height:100vh;
-            width:100%;
-            background:var( --primary-color);
-            font-family:sans-serif;
-            position:relative;
-        }
-        nav{
-            width:84%;
-            margin:auto;
-            padding:20px 0;
-            display:flex;
-            align-items:center;
-            justify-content:space-between;
-        }
-        .logo{
-            width:100px;
-            cursor:pointer;
-        }
-         nav ul li{
-            display:inline-block;
-            list-style:none;
-            margin:10px 20px;
-         }
-         nav ul li a{
-            text-decoration:none;
-            color:#606163;
-         }
-         nav ul li a:hover{
-            color:#ff4321;
-         }
-         .info{
-            margin-left:8%;
-            margin-top:15%;
-         }
-         .info h1{
-            font-size:70px;
-            color:var(--secondary-color);
-            margin-bottom:20px;
-         }
-         span{
-            color:#ff4321;
-         }
-         .info p{
-            color:#606163;
-            line-height:22px;
-         }
-         .info a{
-            background:#ff4321;
-            padding:10px 20px;
-            text-decoration:none;
-            color:var( --primary-color);
-            margin:30px 0;
-            border-radius:5px;
-            display:inline-block;
-         }
-         .img-box{
-            width:45%;
-            height:80%;
-            position:absolute;
-            bottom:0;
-            right:100px;
-         }
-         .img-box img {
-            height: 85%;
-            position: absolute;
-            left: 53%;
-            bottom: -15px;
-            transform: translateX(-50%);
-            border-radius: 56px 66px 70px;
-        }
-         .social-links{
-            margin-top:83px;
-            margin-left:8%;
-         }
-         .social-links a{
-            font-size:30px;
-            margin-right:20px;
-            color:#606163;
-         }
-         .social-links a:hover{
-            color:#ff4321;
-         }
+a{
+    text-decoration: none;
+}
+header{
+    height: 70px;
+    /* border:5px solid black; */
+    background-color:brown;
+}
+#brand{
+    color:white;
+    font-size: 30px;
+    float: left;
+    margin-left:1%;
+    margin-top:1%;
+}
+#social{
+    float:right;
+    margin-right:2%;
+    margin-top:15px;
+}
+.socialimg{
+    height: 35px;
+}
+/* search block css */
+#search{
+    height: 400px;
+    /* border:5px dotted blue; */
+    background-image:url('food.avif');
+    background-size: 100% 400px;
+}
+#logo{
+    height: 150px;
+    width: 150px;
+    background-color:#E23744;
+    border-radius: 35%;
+    margin-left:45%;
+    margin-top: 3%;
+    position: absolute;
+    animation: revolve 10s infinite;
+}
+@keyframes revolve{
+    0%{
+        transform:rotate(30deg);
+        margin-left:2%;
+    }
+    25%{
+        transform:rotate(90deg);
+        margin-left:20%;
+    }
+    50%{
+        transform:rotate(180deg);
+        margin-left:40%;
+    }
+    75%{
+        transform:rotate(270deg);
+        margin-left:80%;
+    }
+    100%{
+        transform:rotate(360deg);
+        margin-left:40%;
+    }
+}
+#logo>span{
+    margin-top: 31%;
+    margin-left: 10%;
+    font-size: 40px;
+    position: absolute;
+    color:white;
+}
+#heading{
+    margin-top: 15%;
+    margin-left: 25%;
+    font-size: 50px;
+    position: absolute;
+    color:white;
+}
+#dropdown{
+    margin-top:20%;
+    margin-left:25%;
+    position: absolute;
+    height: 60px;
+    width:55%;
+    /* border:2px solid black; */
+}
+select{
+    height: 60px;
+    width: 40%;
+    text-align: center;
+    font-size: 20px;
+}
+#rest{
+    width:57%;
+}
+/* quick search block css */
+#quicksearch{
+    /* height: 600px; */
+    /* border:5px groove red; */
+    width:80%;
+    margin-top:2%;
+    margin-left:10%;
+    margin-bottom:2%;
+    display: inline-block;
+    background-color:var(--secondary-color);
+}
+#quickheading{
+    color:var(--primary-color);
+    font-size: 30px;
+    font-weight: bold;
+    margin-left:2%;
+}
+#quicksubheading{
+    color:var(--primary-color);
+    font-size: 20px;
+    margin-left: 2%;
+    line-height: 2;
+}
+.tilecontainer{
+    height: 180px;
+    width:30%;
+    /* border:2px solid black; */
+    box-shadow: 5px 10px 12px gray;
+    float:left;
+    margin-top:3%;
+    margin-left:2%;
+    animation: dance 10s infinite;
+}
+@keyframes dance{
+    0%{transform:rotate(-5deg)}
+    25%{transform:rotate(0deg)}
+    50%{transform:rotate(5deg)}
+    75%{transform:rotate(0deg)}
+    100%{transform:rotate(-5deg)}
+    
+}
+.tilecontainer:hover{
+    transform:scale(1.1)
+}
+.tilecomponent1{
+      width:52%;
+      float:left;
+}
+.tilecomponent1 img{
+    width:100%;
+    height: 180px;
+}
+.tilecomponent2{
+          width:45%;
+          float:left;
+          margin-top:15%;
+          margin-left:2%;
+}
+.componentheading{
+    color:var(--primary-color);
+    font-size: 25px;
+}
+
+.componentsubheading{
+    color:gray;
+    font-size: 20px;
+}
+/* footer block css */
+footer{
+    height: 150px;
+    /* border:5px double green; */
+    background-color:brown;
+    text-align: center;
+}
+ul{
+    list-style: none;
+}
+.fotdiv{
+    width:31%;
+    float: left;
+    border-right:2px solid white;
+}
+.noborder{
+    border-right:none;
+}
+@media screen and (max-width:1400px){
+    body{
+        background-color:var(--secondary-color);
+    }
+}
+@media screen and (max-width:1200px){
+    body{
+        background-color:white;
+    }
+    #dropdown {
+        margin-top: 22%;
+        margin-left: 23%;
+    }
+    #heading {
+        margin-top:16%;
+        margin-left:22%;
+    }
+}
+@media screen and (max-width:800px){
+    body{
+        background-color: white;
+    }
+    .tilecontainer{
+        width:45%;
+    }
+    #dropdown {
+        margin-top: 32%;
+        margin-left:20%;
+    }
+    #heading {
+        margin-top: 23%;
+        margin-left: 9%;
+    }
+    #rest {
+        width:250px;
+    }
+}
+@media screen and (max-width:600px){
+    body{
+        background-color: white;
+    }
+    .tilecontainer{
+        width:100%;
+    }
+    #heading {
+        margin-top: 30%;
+        margin-left: -19%;
+    }
+    #dropdown {
+        margin-top: 41%;
+        margin-left: 10%;
+    }
+    #rest {
+        width: 58%;
+    }
+    #logo{
+        margin-left: 31%;
+        margin-top: 4%;
+    }
+}
     </style>
     <body>
-        <div class="food">
-            <nav>
-                <img src="organic.png" class="logo"/>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Services</a></li>
-                </ul>
+        <header>
+            <div id="brand">
+               Food 52
+            </div>
+            <div id="social">
+                <a href="www.facebook.com" target="-blank">
+                    <img src="face.webp" alt="fb" class="socialimg"/>
+                </a>
+                <a href="www.instagram.com" target="-blank">
+                    <img src="insta.svg" alt="instagram" class="socialimg"/>
+                </a>
+                <a href="www.telegram.com" target="-blank">
+                    <img src="tele.png" alt="telegram" class="socialimg"/>
+                </a>
                 <img src="dark.png" id="icon">
-            </nav>
-            <div class="info">
-                <h1>Organic <span>Foods</span></h1>
-                <p>This is my website showing the healty foods and diets which is related<br>to Organic</p>
-                <a href="">Order Now</a>
             </div>
-            <div class="img-box">
-                <img src="health.jpg" class="img">
+        </header>
+        <div id="search">
+            <div id="logo">
+              <span> Food52</span>
             </div>
-            <div class="social-links">
-                <a><i class="fa-brands fa-instagram"></i></a>
-                <a><i class="fa-brands fa-facebook-f"></i></a>
-                <a><i class="fa-brands fa-linkedin-in"></i></a>
+            <div id="heading">
+                Discover The Best Food & Drinks
             </div>
+            <div id="dropdown">
+                <select>
+                    <option>----Select City----</option>
+                    <option>Hyderabad</option>
+                    <option>Secunderabad</option>
+                    <option>Jubliee Hills</option>
+                    <option>Banjara Hills</option>
+                </select>
+                <select id="rest">
+                    <option>----Select Restaurants----</option>
+                    <option>TGI Fridays</option>
+                    <option>Paradise</option>
+                    <option>Absolute Barbecues</option>
+                    <option>Almond House</option>
+                </select>
+            </div>        
+        </div>
+        <div id="quicksearch">
+            <div id="quickheading">
+                QuickSearch
             </div>
-            <script>
-                var icon = document.getElementById("icon");
-                icon.onclick = function(){
-                    document.body.classList.toggle("dark-theme");
-                    if(document.body.classList.contains("dark-theme")){
-                        icon.src="sun.png";
-                    } else{
-                        icon.src="dark.png";
-                    }
+            <div id="quicksubheading">
+                Find Restuarants By Meal Type
+            </div>
+            <div class="maintilecontainer">
+            <div class="tilecontainer">
+             <div class="tilecomponent1">
+                <img src="break.jpg" alt="breakfast"/>
+                </div>
+                <div class="tilecomponent2">
+                <div class="componentheading">
+                <a>Breakfast</a>
+                </div>
+                <div class="componentsubheading">
+                    Best Deal For Breakfast
+                </div>
+                </div>
+                </div>
+                <div class="tilecontainer">
+                    <div class="tilecomponent1">
+                       <img src="lunch.jpg" alt="lunch"/>
+                       </div>
+                       <div class="tilecomponent2">
+                       <div class="componentheading">
+                        <a>Lunch</a>
+                       </div>
+                       <div class="componentsubheading">
+                           Best Deal For Lunch
+                       </div>
+                       </div>
+                       </div>
+                       <div class="tilecontainer">
+                        <div class="tilecomponent1">
+                           <img src="snack.jpg" alt="snack"/>
+                           </div>
+                           <div class="tilecomponent2">
+                           <div class="componentheading">
+                           <a>Snacks</a>
+                           </div>
+                           <div class="componentsubheading">
+                               Best Deal For Snacks
+                           </div>
+                           </div>
+                           </div>
+                           <div class="tilecontainer">
+                            <div class="tilecomponent1">
+                               <img src="dinner.jpg" alt="dinner"/>
+                               </div>
+                               <div class="tilecomponent2">
+                               <div class="componentheading">
+                               <a href="../listing/listing.html">Dinner</a>
+                               </div>
+                               <div class="componentsubheading">
+                                   Best Deal For Dinner
+                               </div>
+                               </div>
+                               </div>
+                               <div class="tilecontainer">
+                                <div class="tilecomponent1">
+                                   <img src="night.jpg" alt="night"/>
+                                   </div>
+                                   <div class="tilecomponent2">
+                                   <div class="componentheading">
+                                   <a>NightLife</a>
+                                   </div>
+                                   <div class="componentsubheading">
+                                       Best Deal For NightLife
+                                   </div>
+                                   </div>
+                                   </div>
+                                   <div class="tilecontainer">
+                                    <div class="tilecomponent1">
+                                       <img src="drink.jpg" alt="drink"/>
+                                       </div>
+                                       <div class="tilecomponent2">
+                                       <div class="componentheading">
+                                       <a>Drinks</a>
+                                       </div>
+                                       <div class="componentsubheading">
+                                           Best Deal For Drinks
+                                       </div>
+                                       </div>
+                                       </div>
+            </div>
+        </div>
+        <script>
+            var icon = document.getElementById("icon");
+            icon.onclick = function(){
+                document.body.classList.toggle("dark-theme");
+                if(document.body.classList.contains("dark-theme")){
+                    icon.src="sun.png";
+                } else{
+                    icon.src="dark.png";
                 }
-            </script>
+            }
+        </script>
     </body>
+    <footer>
+       <hr>
+       <h3>&copy;Developer Funnel</h3>
+       <div class="fotdiv">
+        <ul>
+            <li>About Us</li>
+            <li>contact Us</li>
+        </ul>
+       </div>
+       <div class="fotdiv">
+        <ul>
+            <li>About Us</li>
+            <li>contact Us</li>
+        </ul>
+       </div>
+       <div class="fotdiv noborder">
+        <ul>
+            <li>About Us</li>
+            <li>contact Us</li>
+        </ul>
+       </div>
+    </footer>
 </html>
