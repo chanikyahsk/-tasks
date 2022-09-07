@@ -38,6 +38,10 @@ button{
     margin-top: 11px;
    position:absolute;
    cursor:pointer;
+   background:#f13242;
+  color: white;
+  border: none;
+  font-size:20px;
 }
 .gift {
     position:absolute;
