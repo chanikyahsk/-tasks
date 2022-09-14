@@ -19,10 +19,31 @@ header{
 #social{
     float:right;
     margin-right:1%;
-    margin-top:15px;
+    margin-top:-9px;
 }
 .socialimg{
     height: 35px;
+    margin-left:-78px;
+    margin-top:29px;
+}
+.location{
+    display: flex;
+    color: white;
+}
+#location {
+    margin-bottom: 0px;
+    margin-top:-26px;
+    margin-right:-2px;
+}
+#wea{
+    margin-bottom: 0px;
+    margin-top:-31px;
+    padding: 6px; 
+}
+#wea img{
+    width:30px;
+    margin-top:-18px;
+    margin-right:-5px;
 }
 /* search block css */
 #search{
@@ -183,12 +204,12 @@ ul{
 }
 @media screen and (max-width:1400px){
     body{
-        background-color: skyblue;
+        background-color: white;
     }
 }
 @media screen and (max-width:1200px){
     body{
-        background-color:lightgreen;
+        background-color:white;
     }
     #dropdown {
         margin-top: 22%;
@@ -201,7 +222,7 @@ ul{
 }
 @media screen and (max-width:800px){
     body{
-        background-color: lightcoral;
+        background-color: white;
     }
     .tilecontainer{
         width:45%;
@@ -220,7 +241,7 @@ ul{
 }
 @media screen and (max-width:600px){
     body{
-        background-color: lightblue;
+        background-color: white;
     }
     .tilecontainer{
         width:100%;
@@ -241,3 +262,4 @@ ul{
         margin-top: 4%;
     }
 }
+

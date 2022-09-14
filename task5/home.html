@@ -9,15 +9,21 @@
                 DeveloperFunnel
             </div>
             <div id="social">
-                <a href="www.facebook.com" target="-blank">
-                    <img src="face.webp" alt="fb" class="socialimg"/>
+                <a href="www.telegram.com" target="-blank">
+                    <img src="tele.png" alt="telegram" class="socialimg"/>
                 </a>
                 <a href="www.instagram.com" target="-blank">
                     <img src="insta.svg" alt="instagram" class="socialimg"/>
                 </a>
-                <a href="www.telegram.com" target="-blank">
-                    <img src="tele.png" alt="telegram" class="socialimg"/>
+                <a href="www.facebook.com" target="-blank">
+                    <img src="face.webp" alt="fb" class="socialimg"/>
                 </a>
+                <div class="location">
+                    <div id="location"></div>
+                    <div id="wea">
+                        <img src="geo.png" alt="geo"/>
+                </div>
+                </div>
             </div>
         </header>
         <div id="search">
@@ -58,7 +64,7 @@
                 </div>
                 <div class="tilecomponent2">
                 <div class="componentheading">
-                <a href="../css/listing/listing.html">Breakfast</a>
+                <a>Breakfast</a>
                 </div>
                 <div class="componentsubheading">
                     Best Deal For Breakfast
@@ -71,7 +77,7 @@
                        </div>
                        <div class="tilecomponent2">
                        <div class="componentheading">
-                       <a href="../css/listing/listing.html">Lunch</a>
+                       <a>Lunch</a>
                        </div>
                        <div class="componentsubheading">
                            Best Deal For Lunch
@@ -84,7 +90,7 @@
                            </div>
                            <div class="tilecomponent2">
                            <div class="componentheading">
-                           <a href="../css/listing/listing.html">Snacks</a>
+                           <a>Snacks</a>
                            </div>
                            <div class="componentsubheading">
                                Best Deal For Snacks
@@ -110,7 +116,7 @@
                                    </div>
                                    <div class="tilecomponent2">
                                    <div class="componentheading">
-                                   <a href="../css/listing/listing.html">NightLife</a>
+                                   <a>NightLife</a>
                                    </div>
                                    <div class="componentsubheading">
                                        Best Deal For NightLife
@@ -123,7 +129,7 @@
                                        </div>
                                        <div class="tilecomponent2">
                                        <div class="componentheading">
-                                       <a href="../css/listing/listing.html">Drinks</a>
+                                       <a>Drinks</a>
                                        </div>
                                        <div class="componentsubheading">
                                            Best Deal For Drinks
@@ -134,6 +140,10 @@
 
             </div>
         </div>
+        <script src="geolocation.js"></script>
+        <script>
+            window.onload=getlocation()
+        </script>
     </body>
     <footer>
        <hr>
